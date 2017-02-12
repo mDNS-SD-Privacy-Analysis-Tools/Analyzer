@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="527.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="analyzer.controller.ServiceInstanceExplorerController">
+   <children>
+      <HBox>
+         <children>
+              <Label alignment="CENTER" prefHeight="24.0" prefWidth="74.0" text="Location" textAlignment="CENTER" />
+              <ChoiceBox fx:id="cbLocation" onAction="#onLocationChanged" prefHeight="25.0" prefWidth="127.0" />
+              <Label alignment="CENTER" prefHeight="24.0" prefWidth="74.0" text="Service" />
+              <ComboBox id="cbService" fx:id="cbService" onAction="#onServiceChanged" prefHeight="25.0" prefWidth="127.0" />
+            <Label alignment="CENTER" layoutX="417.0" layoutY="15.0" prefHeight="24.0" prefWidth="74.0" text="||" />
+            <Label alignment="CENTER" layoutX="216.0" layoutY="15.0" prefHeight="24.0" prefWidth="74.0" text="Device" />
+            <ComboBox id="cbServer" fx:id="cbServer" layoutX="290.0" layoutY="15.0" onAction="#onServerChanged" prefHeight="25.0" prefWidth="170.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+        <TableView id="tblLogEntries" fx:id="tblLogEntries" prefHeight="307.0" prefWidth="571.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="154.0" text="Name" />
+                <TableColumn fx:id="serviceColumn" prefWidth="154.0" text="Service" />
+                <TableColumn fx:id="timeColumn" minWidth="6.0" prefWidth="94.0" text="Time" />
+                <TableColumn fx:id="serverColumn" prefWidth="132.0" text="Server" />
+                <TableColumn fx:id="portColumn" minWidth="0.0" prefWidth="64.0" text="Port" />
+                <TableColumn fx:id="txtColumn" prefWidth="360.0" text="TXT" />
+            </columns>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+        </TableView>
+   </children>
+</VBox>

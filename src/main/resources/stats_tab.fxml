@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="527.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="analyzer.controller.StatsController">
+   <children>
+      <HBox>
+         <children>
+              <Label alignment="CENTER" prefHeight="24.0" prefWidth="74.0" text="Location" textAlignment="CENTER" />
+              <ChoiceBox fx:id="cbLocation" onAction="#onLocationChanged" prefHeight="25.0" prefWidth="127.0" />
+              <Label alignment="CENTER" prefHeight="24.0" prefWidth="74.0" text="Service" />
+              <ComboBox id="cbService" fx:id="cbService" onAction="#onServiceChanged" prefHeight="25.0" prefWidth="127.0" />
+             <Label alignment="CENTER" prefHeight="24.0" prefWidth="74.0" text="Device" />
+             <ComboBox id="cbServer" fx:id="cbServer" onAction="#onServerChanged" prefHeight="25.0" prefWidth="170.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <AnchorPane prefHeight="459.0" prefWidth="804.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="Number of Services: " />
+            <Label fx:id="lblAmountServices" layoutX="132.0" layoutY="14.0" prefHeight="17.0" prefWidth="36.0" text="-" />
+            <Label layoutX="22.0" layoutY="31.0" text="Number of Devices: " />
+            <Label fx:id="lblAmountDevices" layoutX="132.0" layoutY="31.0" prefHeight="17.0" prefWidth="36.0" text="-" />
+            <Label layoutX="230.0" layoutY="31.0" text="Apple Devices:" />
+            <Label fx:id="lblAmountApple" layoutX="318.0" layoutY="31.0" prefHeight="17.0" prefWidth="36.0" text="-" />
+            <Label layoutX="22.0" layoutY="66.0" text="Services / Device:" />
+            <Label fx:id="lblServicesPerDevice" layoutX="122.0" layoutY="66.0" prefHeight="17.0" prefWidth="36.0" text="-" />
+            <Label layoutX="458.0" layoutY="23.0" text="Number of Service Instances:" />
+            <TableView fx:id="tblServiceInstanceCount" layoutX="458.0" layoutY="48.0" prefHeight="250.0" prefWidth="334.0">
+              <columns>
+                <TableColumn fx:id="instanceCountColumn" prefWidth="109.0" text="# Instances" />
+                <TableColumn fx:id="serviceColumn" prefWidth="172.0" text="Service" />
+              </columns>
+            </TableView>
+            <Label layoutX="458.0" layoutY="307.0" text="Total Number of Service Instances:" />
+            <Label fx:id="lblAmountInstances" layoutX="649.0" layoutY="307.0" prefHeight="17.0" prefWidth="36.0" text="-" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="180.0" minWidth="200.0" prefHeight="368.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="analyzer.controller.ChartController">
+    <children>
+        <Label alignment="CENTER" layoutX="94.0" layoutY="14.0" prefHeight="24.0" prefWidth="335.0" text="This is the chart tab" />
+    </children>
+</AnchorPane>
